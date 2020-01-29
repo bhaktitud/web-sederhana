@@ -1,0 +1,249 @@
+/*stylesheet*/
+*{
+    overflow-x: hidden;
+}
+
+/*Element Selector*/
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url(img/triangle-mosaic.png);
+    display: block;
+}
+
+header{
+    position: fixed;
+    background-color:black;
+    height: auto;
+    top: 0;
+    width: 100%;
+    opacity: 0.8;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+header h2{
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+    letter-spacing: 0.10em;
+}
+
+header h4{
+    color: white;
+    margin-top: 10px;
+}
+
+h5{
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+}
+
+/*underline effect transition*/
+h5:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    margin-top: 2px;
+    height: 2px;
+    left: 50%;
+    background:black;
+    transition: all 0.3s ease-in-out;
+    width: 0;
+}
+
+h5:hover:after{
+    width: 80%; 
+    left: 0;
+}
+
+
+
+section{
+    width: 100%;
+    /* border-style: dashed;
+    border-width: 1px; */
+    margin-top: 80px;
+}
+
+footer{
+    display: flex;
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h5{
+    color: white;
+}
+
+p:hover ,h4:hover{
+    color: yellow;
+}
+
+/*id selector*/
+
+/*index.html*/
+#mainbg{
+    position: absolute;
+    margin: 0px;
+    background-size: cover;
+}
+
+#fwbtn{
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    top: 500px;
+    right: 350px;
+    transition: 0.1s;
+}
+
+/*content.html*/
+
+#divlist-cv{
+    margin: 20px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#date{
+    /* border-style: dashed;
+    border-width: 1px;
+    border-color: teal; */
+    opacity: 0.8;
+    width: 500px;
+    /* background-image: url(img/gradient.png); */
+    margin-left: 20vw;
+    margin-bottom: 2vw;
+    text-align: right;
+}
+
+#desc{
+    margin-right: 20vw;
+}
+
+#fwbtn:hover{
+    width: 15%;
+    height: 20%;
+}
+
+#line{
+    height: 750px;
+    width: 70%;
+}
+
+#timeline{
+    border-radius: 5px;
+    border-left: 1px solid black;
+    height: 1000px;
+}
+
+/*class selector*/
+/*content.html*/
+.divcv{
+    /* border-style: dashed;
+    border-width: 1px; */
+    display: inline-block;
+    height: 1100px;
+}
+
+
+.divlist{
+    margin: 0;
+    padding: 0;
+}
+
+.date-cus{
+    /* border-style: dashed;
+    border-width: 1px; */
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.yearlist{
+    font-weight: bold;
+    background-color: dimgrey;
+    border-radius: 20px;
+    padding: 20px;
+    transition: 0.1s;
+}
+
+.yearlist:hover{
+    font-size: 125%;
+    border-right: solid firebrick;
+}
+
+.description{
+    margin-top: 20px;
+    margin-left: 5px;
+    padding: 5px;
+    border-bottom: black;
+    font-family: 'MShadows Into Light';
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.description:nth-child(odd){
+    background-color: grey;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+.description:nth-child(even){
+    background-color: grey;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+.description:hover{
+    background-color: dimgrey;
+    opacity: 1;
+    border-left: solid firebrick;
+}
+
+/*Flip Card Animate*/
+.flip-card{
+    background-color: transparent;
+    height: 300px;
+    perspective: 1000px;
+}
+
+/*flip card test*/
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:active .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back{
+    position:absolute;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front{
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back{
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
